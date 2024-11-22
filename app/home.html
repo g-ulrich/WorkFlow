@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>WorkFlow | Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="..\src\renderer\highlight\styles\dark.min.css">
+  <script src="..\src\renderer\highlight\highlight.min.js"></script>
+
+
+</head>
+
+<body>
+  <div class="vflex">
+    <!-- nav -->
+    <div id="menu-bar" class="vno-grow flex">
+      <div class="no-grow thin-border-bottom "><img height="24" src="../resources/images/favicon.ico"/></div>
+      <div id="menu-toggle" class="no-grow menubar-btn thin-border-bottom px-2 py-1 " style="font-size: 1.2rem"><i class="fa-solid fa-bars"></i></div>
+      <div class="grow thin-border-bottom"></div>
+        <div class="no-grow flex thin-border-bottom">
+          <div class="px-3 py-2 no-grow menubar-btn" id="minimizeBtn"><i class="fa-solid fa-minus"></i></div>
+          <div class="px-3 py-2 no-grow menubar-btn" id="maximizeBtn"><i class="fa-regular fa-square"></i></div>
+          <div class="px-3 py-2 no-grow menubar-btn" id="closeBtn"><i class="fa-solid fa-x"></i></div>
+        </div>
+      
+    </div>
+    <!-- body -->
+     <div class="vgrow">
+        <div class="flex">
+          <!-- history -->
+          <div id="chat_history" class="no-grow thin-border-right bg-charcoal">
+            <div id="menuBtns" class="text-center menu-tab-new p-1 mx-1"></div>
+            <div id="menuTabs" class=""></div>
+          </div>
+          <!-- chat -->
+          <div class="grow vflex overflow-auto" style="height: calc(100vh - 28px);min-height: 300px;">
+            <!-- chat body -->
+            <div class="vgrow chat-main-body">
+              <div id="chatMain" class="p-3 position-relative container" style="max-height: calc(100vh - 228px);"></div>
+            </div>
+            <!-- chat input -->
+             <div class="vno-grow thin-border-top">
+              <div id="chatInputCont" class=" chat-input-container px-3">
+                <div class="flex gap-2 my-1">
+                  <a id="chat_mic" href="#" class="no-grow chat-btn px-1"><i class="fa-solid fa-microphone"></i></a>
+                  <a id="chat_attach" href="#" class="no-grow chat-btn px-1"><i class="fa-solid fa-paperclip"></i> Attach</a>
+                  <div class="grow"></div>
+                  <a id="chat_model" href="#" class="no-grow chat-btn px-1"></a>
+                </div>
+                <textarea id="chatInputMain" class="w-100 p-2 chat-input" placeholder="Message"
+                  style="resize:none;"></textarea>
+        
+                  <!-- File imports -->
+                  <div id="fileImportsCont" class="">
+                    
+                  </div>
+                  <!-- Hidden elements -->
+                  <input id="chat_fileInput" type="file" class="d-none" multiple>
+                  <audio class="d-none" id="audio" controls></audio>
+              </div>
+             </div>
+          </div>
+        </div>
+     </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>WorkFlow | Home</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="..\src\renderer\highlight\styles\dark.min.css">
+  <script src="..\src\renderer\highlight\highlight.min.js"></script>
+
+
+</head>
+
+<body>
+  <nav id="nav" class="sticky-top menu-nav" style="z-index: 99999;">
+    <div id="menu-bar" class="grow flex px-1" style="padding-top: .25rem;">
+      <div class="no-grow flex">
+        <!-- <div class="no-grow">
+          <i class="fa-solid fa-bars"></i>
+        </div> -->
+        <div id="menuTabs" class="no-grow flex"></div>
+        <div id="menuBtns" class="text-center no-grow menu-tab-new p-1 mx-1"></div>
+      </div>
+
+    </div>
+    <div class="flex position-absolute" style="right:0px;top:0px;">
+      <div class="px-3 py-2 no-grow menubar-btn" id="minimizeBtn"><i class="fa-solid fa-minus"></i></div>
+      <div class="px-3 py-2 no-grow menubar-btn" id="maximizeBtn"><i class="fa-regular fa-square"></i></div>
+      <div class="px-3 py-2 no-grow menubar-btn" id="closeBtn"><i class="fa-solid fa-x"></i></div>
+    </div>
+    
+  </nav>
+
+  <div id="chatCont" class=" y-scroll">
+    <div id="chatBodyCont">
+      <div id="chatMain" class=" p-3 chat-main-body position-relative">
+      </div>
+      <div id="chatInputCont" class="fixed-bottom chat-input-container px-3">
+        <div class="flex gap-2 my-1">
+          <a id="chat_mic" href="#" class="no-grow chat-btn px-1"><i class="fa-solid fa-microphone"></i></a>
+          <a id="chat_attach" href="#" class="no-grow chat-btn px-1"><i class="fa-solid fa-paperclip"></i> Attach</a>
+          <div class="grow"></div>
+          <a id="chat_model" href="#" class="no-grow chat-btn px-1"></a>
+        </div>
+        <textarea id="chatInputMain" class="w-100 p-2 chat-input" placeholder="Message"
+          style="resize:none;"></textarea>
+
+          <!-- File imports -->
+          <div id="fileImportsCont" class="">
+            
+          </div>
+          <!-- Hidden elements -->
+          <input id="chat_fileInput" type="file" class="d-none" multiple>
+          <audio class="d-none" id="audio" controls></audio>
+      </div>
+      <div id="system_message" class="px-3 text-center">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
